@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        .box {
+            width: 300px;
+            border: 1px solid #000;
+            margin: 30px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box h2 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .box .input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .box li {
+            width: 260px;
+            display: flex;
+            /* justify-content: space-around; */
+            border-bottom: 2px solid gray;
+            margin: 10px auto;
+            box-sizing: border-box;
+            padding-bottom: 5px;
+        }
+
+        .box li i {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .box li span {
+            width: 180px;
+        }
+
+        .box li i,
+        .box li button {
+            cursor: pointer;
+        }
+
+        .box li.on i {
+            color: red;
+        }
+
+        .box li.on span {
+            color: red;
+            text-decoration: line-through;
+        }
+
+        .box li button {
+            background: lightgray;
+            border: none;
+        }
+
+        em {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>일정 관리</h2>
+        <form action="">
+            <input type="text" class="input" placeholder="일정을 입력하세요">
+        </form>
+        <ul>
+
+        </ul>
+    </div>
+    <script type="module" src="module/app.js">
+        // localStorage.clear();
+
+        // const txt = document.querySelector('.input');
+        // const form = document.querySelector('form');
+        // const ul = document.querySelector('ul');
+        // let list = [];
+        // let no = 0;
+
+        // list = JSON.parse(localStorage.getItem("list")) || [];
+
+        // delete
+        // const del = (delBtn, id) => {
+        //     delBtn.addEventListener('click', e => {
+        //         list = list.filter(item => item.id != id)
+        //         localStorage.setItem("list", JSON.stringify(list))
+        //         show();
+        //     })
+        // }
+
+        // done
+        // const done = (check) => {
+        //     check.addEventListener('click', e => {
+        //         e.target.parentElement.classList.toggle('on')
+        //         console.log(e.target.parentElement.dataset.id);
+        //         list.forEach(ele => {
+        //             if (ele.id == e.target.parentElement.dataset.id) {
+        //                 ele.on = !ele.on;
+        //             }
+        //         })
+        //     })
+        // }
+
+        // show
+        // const show = () => {
+        //     ul.innerHTML = '';
+        //     list.forEach((ele, idx) => {
+        //         const { id, doList } = ele;
+        //         let li = document.createElement('li');
+        //         let check = document.createElement('i');
+        //         let span = document.createElement('span');
+        //         let delBtn = document.createElement('button');
+
+        //         check.textContent = '✓';
+        //         span.textContent = doList;
+        //         delBtn.textContent = '삭제';
+
+        //         li.dataset.id = id
+        //         li.append(check);
+        //         li.append(span);
+        //         li.append(delBtn);
+        //         if (ele.on) {
+        //             li.classList.add('on')
+        //             ul.append(li);
+        //         } else {
+        //             ul.append(li);
+        //         }
+
+        //         del(delBtn, id);
+        //         done(check)
+
+        //     });
+        //     txt.value = '';
+        //     txt.focus();
+        // }
+
+        // add
+        // const add = () => {
+        //     list = [
+        //         ...list,
+        //         {
+        //             id: ++no,
+        //             on: false,
+        //             doList: txt.value
+        //         }
+        //     ]
+        //     localStorage.setItem("list", JSON.stringify(list))
+        // }
+
+        // form.addEventListener('submit', e => {
+        //     if (txt.value) {
+        //         e.preventDefault();
+        //         add();
+        //         show();
+        //     }
+        // })
+        // show();
+
+    </script>
+</body>
+
+</html>
